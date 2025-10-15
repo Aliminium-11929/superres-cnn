@@ -10,6 +10,7 @@ from utils import upscale_image, show_images, psnr
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
+
 # Transform: grayscale + resize for LR-HR pair
 transform_hr = transforms.Compose([
     transforms.Grayscale(),
