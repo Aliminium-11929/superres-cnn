@@ -51,7 +51,7 @@ superres-cnn/
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/your-username/superres-cnn.git
+git clone https://github.com/Aliminium-11929/superres-cnn.git
 cd superres-cnn
 ```
 
