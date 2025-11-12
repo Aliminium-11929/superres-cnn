@@ -1,0 +1,337 @@
+================================================================================
+MODEL WEIGHTS INFORMATION
+================================================================================
+
+Model Type: EDSR
+Epoch: 94
+Loss: 0.02352746364660561
+Number of Blocks: 8
+
+================================================================================
+
+LAYER STATISTICS
+--------------------------------------------------------------------------------
+
+Layer: conv_first.weight
+  Shape: (64, 1, 3, 3)
+  Parameters: 576
+  Mean: 0.000788
+  Std Dev: 0.056185
+  Min: -0.162459
+  Max: 0.202715
+
+Layer: conv_first.bias
+  Shape: (64,)
+  Parameters: 64
+  Mean: 0.000064
+  Std Dev: 0.001653
+  Min: -0.003925
+  Max: 0.003727
+
+Layer: res_blocks.0.conv1.weight
+  Shape: (64, 64, 3, 3)
+  Parameters: 36,864
+  Mean: -0.000002
+  Std Dev: 0.058817
+  Min: -0.250535
+  Max: 0.261863
+
+Layer: res_blocks.0.conv1.bias
+  Shape: (64,)
+  Parameters: 64
+  Mean: -0.000716
+  Std Dev: 0.003787
+  Min: -0.005734
+  Max: 0.010814
+
+Layer: res_blocks.0.conv2.weight
+  Shape: (64, 64, 3, 3)
+  Parameters: 36,864
+  Mean: -0.000101
+  Std Dev: 0.059042
+  Min: -0.250239
+  Max: 0.220948
+
+Layer: res_blocks.0.conv2.bias
+  Shape: (64,)
+  Parameters: 64
+  Mean: -0.000124
+  Std Dev: 0.001111
+  Min: -0.003560
+  Max: 0.003206
+
+Layer: res_blocks.1.conv1.weight
+  Shape: (64, 64, 3, 3)
+  Parameters: 36,864
+  Mean: 0.000247
+  Std Dev: 0.058544
+  Min: -0.240507
+  Max: 0.275880
+
+Layer: res_blocks.1.conv1.bias
+  Shape: (64,)
+  Parameters: 64
+  Mean: -0.001676
+  Std Dev: 0.002653
+  Min: -0.008682
+  Max: 0.003966
+
+Layer: res_blocks.1.conv2.weight
+  Shape: (64, 64, 3, 3)
+  Parameters: 36,864
+  Mean: 0.001086
+  Std Dev: 0.058365
+  Min: -0.222040
+  Max: 0.257116
+
+Layer: res_blocks.1.conv2.bias
+  Shape: (64,)
+  Parameters: 64
+  Mean: 0.000113
+  Std Dev: 0.001657
+  Min: -0.005606
+  Max: 0.005449
+
+Layer: res_blocks.2.conv1.weight
+  Shape: (64, 64, 3, 3)
+  Parameters: 36,864
+  Mean: -0.000925
+  Std Dev: 0.058643
+  Min: -0.264681
+  Max: 0.237656
+
+Layer: res_blocks.2.conv1.bias
+  Shape: (64,)
+  Parameters: 64
+  Mean: -0.002493
+  Std Dev: 0.003204
+  Min: -0.010440
+  Max: 0.008939
+
+Layer: res_blocks.2.conv2.weight
+  Shape: (64, 64, 3, 3)
+  Parameters: 36,864
+  Mean: 0.000202
+  Std Dev: 0.059010
+  Min: -0.257740
+  Max: 0.232586
+
+Layer: res_blocks.2.conv2.bias
+  Shape: (64,)
+  Parameters: 64
+  Mean: 0.000370
+  Std Dev: 0.001815
+  Min: -0.004054
+  Max: 0.003913
+
+Layer: res_blocks.3.conv1.weight
+  Shape: (64, 64, 3, 3)
+  Parameters: 36,864
+  Mean: -0.000684
+  Std Dev: 0.058606
+  Min: -0.215100
+  Max: 0.229412
+
+Layer: res_blocks.3.conv1.bias
+  Shape: (64,)
+  Parameters: 64
+  Mean: -0.002923
+  Std Dev: 0.002612
+  Min: -0.008704
+  Max: 0.004403
+
+Layer: res_blocks.3.conv2.weight
+  Shape: (64, 64, 3, 3)
+  Parameters: 36,864
+  Mean: 0.000473
+  Std Dev: 0.058783
+  Min: -0.245853
+  Max: 0.215368
+
+Layer: res_blocks.3.conv2.bias
+  Shape: (64,)
+  Parameters: 64
+  Mean: 0.000110
+  Std Dev: 0.002464
+  Min: -0.005709
+  Max: 0.004637
+
+Layer: res_blocks.4.conv1.weight
+  Shape: (64, 64, 3, 3)
+  Parameters: 36,864
+  Mean: -0.001068
+  Std Dev: 0.058493
+  Min: -0.239657
+  Max: 0.254387
+
+Layer: res_blocks.4.conv1.bias
+  Shape: (64,)
+  Parameters: 64
+  Mean: -0.004238
+  Std Dev: 0.003199
+  Min: -0.013764
+  Max: 0.002430
+
+Layer: res_blocks.4.conv2.weight
+  Shape: (64, 64, 3, 3)
+  Parameters: 36,864
+  Mean: 0.000004
+  Std Dev: 0.058695
+  Min: -0.228231
+  Max: 0.218860
+
+Layer: res_blocks.4.conv2.bias
+  Shape: (64,)
+  Parameters: 64
+  Mean: -0.000232
+  Std Dev: 0.002814
+  Min: -0.008425
+  Max: 0.005690
+
+Layer: res_blocks.5.conv1.weight
+  Shape: (64, 64, 3, 3)
+  Parameters: 36,864
+  Mean: -0.000092
+  Std Dev: 0.058694
+  Min: -0.230066
+  Max: 0.243737
+
+Layer: res_blocks.5.conv1.bias
+  Shape: (64,)
+  Parameters: 64
+  Mean: -0.004380
+  Std Dev: 0.004103
+  Min: -0.012575
+  Max: 0.009786
+
+Layer: res_blocks.5.conv2.weight
+  Shape: (64, 64, 3, 3)
+  Parameters: 36,864
+  Mean: -0.000429
+  Std Dev: 0.059088
+  Min: -0.252791
+  Max: 0.229791
+
+Layer: res_blocks.5.conv2.bias
+  Shape: (64,)
+  Parameters: 64
+  Mean: -0.000298
+  Std Dev: 0.003130
+  Min: -0.008146
+  Max: 0.007143
+
+Layer: res_blocks.6.conv1.weight
+  Shape: (64, 64, 3, 3)
+  Parameters: 36,864
+  Mean: 0.000399
+  Std Dev: 0.058651
+  Min: -0.271877
+  Max: 0.252402
+
+Layer: res_blocks.6.conv1.bias
+  Shape: (64,)
+  Parameters: 64
+  Mean: -0.006247
+  Std Dev: 0.005223
+  Min: -0.020182
+  Max: 0.006925
+
+Layer: res_blocks.6.conv2.weight
+  Shape: (64, 64, 3, 3)
+  Parameters: 36,864
+  Mean: -0.000034
+  Std Dev: 0.058793
+  Min: -0.264215
+  Max: 0.263109
+
+Layer: res_blocks.6.conv2.bias
+  Shape: (64,)
+  Parameters: 64
+  Mean: -0.000617
+  Std Dev: 0.003025
+  Min: -0.008619
+  Max: 0.006599
+
+Layer: res_blocks.7.conv1.weight
+  Shape: (64, 64, 3, 3)
+  Parameters: 36,864
+  Mean: 0.000232
+  Std Dev: 0.058568
+  Min: -0.238264
+  Max: 0.227019
+
+Layer: res_blocks.7.conv1.bias
+  Shape: (64,)
+  Parameters: 64
+  Mean: -0.007787
+  Std Dev: 0.007111
+  Min: -0.025903
+  Max: 0.009221
+
+Layer: res_blocks.7.conv2.weight
+  Shape: (64, 64, 3, 3)
+  Parameters: 36,864
+  Mean: 0.000174
+  Std Dev: 0.058481
+  Min: -0.244903
+  Max: 0.315082
+
+Layer: res_blocks.7.conv2.bias
+  Shape: (64,)
+  Parameters: 64
+  Mean: -0.000022
+  Std Dev: 0.002359
+  Min: -0.006204
+  Max: 0.004546
+
+Layer: conv_before_upsample.weight
+  Shape: (64, 64, 3, 3)
+  Parameters: 36,864
+  Mean: 0.000083
+  Std Dev: 0.058845
+  Min: -0.227299
+  Max: 0.242797
+
+Layer: conv_before_upsample.bias
+  Shape: (64,)
+  Parameters: 64
+  Mean: -0.000066
+  Std Dev: 0.001686
+  Min: -0.003939
+  Max: 0.002964
+
+Layer: upsample.0.weight
+  Shape: (256, 64, 3, 3)
+  Parameters: 147,456
+  Mean: 0.000162
+  Std Dev: 0.029392
+  Min: -0.121566
+  Max: 0.125604
+
+Layer: upsample.0.bias
+  Shape: (256,)
+  Parameters: 256
+  Mean: -0.000111
+  Std Dev: 0.000759
+  Min: -0.002158
+  Max: 0.001923
+
+Layer: conv_last.weight
+  Shape: (1, 64, 3, 3)
+  Parameters: 576
+  Mean: 0.003695
+  Std Dev: 0.486787
+  Min: -1.292086
+  Max: 1.689552
+
+Layer: conv_last.bias
+  Shape: (1,)
+  Parameters: 1
+  Mean: 0.001358
+  Std Dev: nan
+  Min: 0.001358
+  Max: 0.001358
+
+================================================================================
+TOTAL PARAMETERS: 776,705
+================================================================================
