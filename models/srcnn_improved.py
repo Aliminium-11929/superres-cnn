@@ -31,6 +31,9 @@ class SRCNN(nn.Module):
                     nn.init.constant_(m.bias, 0)
     
     def forward(self, x):
+        # Store original LR size
+        _, _, h, w = x.shape
+        
         # Bicubic upsampling first
         x = F.interpolate(x, scale_factor=2, mode='bicubic', align_corners=False)
         
@@ -38,6 +41,10 @@ class SRCNN(nn.Module):
         x = F.relu(self.conv2(x))
         x = F.relu(self.conv3(x))
         x = self.conv4(x)
+        
+        # Ensure output size matches expected 2x upsampling
+        # In case of odd dimensions, crop to exact 2*h x 2*w
+        x = x[:, :, :2*h, :2*w]
         
         return x
 
@@ -82,6 +89,9 @@ class EDSR_Lite(nn.Module):
                     nn.init.constant_(m.bias, 0)
     
     def forward(self, x):
+        # Store original LR size
+        _, _, h, w = x.shape
+        
         # Initial feature extraction
         x = self.conv_first(x)
         residual = x
@@ -96,6 +106,10 @@ class EDSR_Lite(nn.Module):
         # Upsample and reconstruct
         x = self.upsample(x)
         x = self.conv_last(x)
+        
+        # Ensure output size matches expected 2x upsampling
+        # In case of odd dimensions, crop to exact 2*h x 2*w
+        x = x[:, :, :2*h, :2*w]
         
         return x
 

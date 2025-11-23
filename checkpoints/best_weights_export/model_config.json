@@ -1,190 +1,46 @@
 {
-  "model_type": "edsr",
-  "num_blocks": 8,
+  "model_type": "srcnn",
+  "num_blocks": null,
   "num_channels": 1,
   "scale_factor": 2,
-  "epoch": 94,
-  "loss": 0.02352746364660561,
-  "total_parameters": 776705,
+  "epoch": 99,
+  "loss": 0.017166474550031126,
+  "total_parameters": 159745,
   "layers": {
-    "conv_first.weight": [
+    "conv1.weight": [
       64,
       1,
-      3,
-      3
+      9,
+      9
     ],
-    "conv_first.bias": [
+    "conv1.bias": [
       64
     ],
-    "res_blocks.0.conv1.weight": [
+    "conv2.weight": [
       64,
       64,
-      3,
-      3
+      5,
+      5
     ],
-    "res_blocks.0.conv1.bias": [
+    "conv2.bias": [
       64
     ],
-    "res_blocks.0.conv2.weight": [
+    "conv3.weight": [
+      32,
       64,
-      64,
-      3,
-      3
+      5,
+      5
     ],
-    "res_blocks.0.conv2.bias": [
-      64
+    "conv3.bias": [
+      32
     ],
-    "res_blocks.1.conv1.weight": [
-      64,
-      64,
-      3,
-      3
-    ],
-    "res_blocks.1.conv1.bias": [
-      64
-    ],
-    "res_blocks.1.conv2.weight": [
-      64,
-      64,
-      3,
-      3
-    ],
-    "res_blocks.1.conv2.bias": [
-      64
-    ],
-    "res_blocks.2.conv1.weight": [
-      64,
-      64,
-      3,
-      3
-    ],
-    "res_blocks.2.conv1.bias": [
-      64
-    ],
-    "res_blocks.2.conv2.weight": [
-      64,
-      64,
-      3,
-      3
-    ],
-    "res_blocks.2.conv2.bias": [
-      64
-    ],
-    "res_blocks.3.conv1.weight": [
-      64,
-      64,
-      3,
-      3
-    ],
-    "res_blocks.3.conv1.bias": [
-      64
-    ],
-    "res_blocks.3.conv2.weight": [
-      64,
-      64,
-      3,
-      3
-    ],
-    "res_blocks.3.conv2.bias": [
-      64
-    ],
-    "res_blocks.4.conv1.weight": [
-      64,
-      64,
-      3,
-      3
-    ],
-    "res_blocks.4.conv1.bias": [
-      64
-    ],
-    "res_blocks.4.conv2.weight": [
-      64,
-      64,
-      3,
-      3
-    ],
-    "res_blocks.4.conv2.bias": [
-      64
-    ],
-    "res_blocks.5.conv1.weight": [
-      64,
-      64,
-      3,
-      3
-    ],
-    "res_blocks.5.conv1.bias": [
-      64
-    ],
-    "res_blocks.5.conv2.weight": [
-      64,
-      64,
-      3,
-      3
-    ],
-    "res_blocks.5.conv2.bias": [
-      64
-    ],
-    "res_blocks.6.conv1.weight": [
-      64,
-      64,
-      3,
-      3
-    ],
-    "res_blocks.6.conv1.bias": [
-      64
-    ],
-    "res_blocks.6.conv2.weight": [
-      64,
-      64,
-      3,
-      3
-    ],
-    "res_blocks.6.conv2.bias": [
-      64
-    ],
-    "res_blocks.7.conv1.weight": [
-      64,
-      64,
-      3,
-      3
-    ],
-    "res_blocks.7.conv1.bias": [
-      64
-    ],
-    "res_blocks.7.conv2.weight": [
-      64,
-      64,
-      3,
-      3
-    ],
-    "res_blocks.7.conv2.bias": [
-      64
-    ],
-    "conv_before_upsample.weight": [
-      64,
-      64,
-      3,
-      3
-    ],
-    "conv_before_upsample.bias": [
-      64
-    ],
-    "upsample.0.weight": [
-      256,
-      64,
-      3,
-      3
-    ],
-    "upsample.0.bias": [
-      256
-    ],
-    "conv_last.weight": [
+    "conv4.weight": [
       1,
-      64,
-      3,
-      3
+      32,
+      5,
+      5
     ],
-    "conv_last.bias": [
+    "conv4.bias": [
       1
     ]
   }

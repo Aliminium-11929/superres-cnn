@@ -9,13 +9,14 @@ class DIV2KDataset(Dataset):
     DIV2K dataset loader for super-resolution training.
     Handles grayscale LR-HR image pairs.
     """
-    def __init__(self, hr_dir, lr_dir, patch_size=96, augment=True):
+    def __init__(self, hr_dir, lr_dir, patch_size=96, augment=True, max_samples=None):
         """
         Args:
             hr_dir: Path to high-resolution grayscale images
             lr_dir: Path to low-resolution grayscale images
             patch_size: Size of random crops for training
             augment: Whether to apply data augmentation
+            max_samples: Maximum number of samples to use (for train/test split)
         """
         self.hr_dir = hr_dir
         self.lr_dir = lr_dir
@@ -27,6 +28,11 @@ class DIV2KDataset(Dataset):
         self.lr_files = sorted([f for f in os.listdir(lr_dir) if f.endswith('.png')])
         
         assert len(self.hr_files) == len(self.lr_files), "Mismatch in HR and LR image counts"
+        
+        # Limit samples if specified
+        if max_samples is not None:
+            self.hr_files = self.hr_files[:max_samples]
+            self.lr_files = self.lr_files[:max_samples]
         
     def __len__(self):
         return len(self.hr_files)
@@ -90,10 +96,28 @@ class DIV2KValidationDataset(Dataset):
         self.hr_files = sorted([f for f in os.listdir(hr_dir) if f.endswith('.png')])
         self.lr_files = sorted([f for f in os.listdir(lr_dir) if f.endswith('.png')])
         
+        # Ensure matching files
+        hr_names = set([f.split('.')[0].split('x')[0] for f in self.hr_files])
+        lr_names = set([f.split('.')[0].split('x')[0] for f in self.lr_files])
+        common_names = sorted(hr_names.intersection(lr_names))
+        
+        # Filter to only common files
+        self.hr_files = [f for f in self.hr_files if f.split('.')[0].split('x')[0] in common_names]
+        self.lr_files = [f for f in self.lr_files if f.split('.')[0].split('x')[0] in common_names]
+        
+        # Double check they match
+        assert len(self.hr_files) == len(self.lr_files), \
+            f"Mismatch: {len(self.hr_files)} HR files vs {len(self.lr_files)} LR files"
+        
+        print(f"Validation dataset: {len(self.hr_files)} image pairs")
+        
     def __len__(self):
         return len(self.hr_files)
     
     def __getitem__(self, idx):
+        if idx >= len(self.hr_files):
+            raise IndexError(f"Index {idx} out of range for dataset of size {len(self.hr_files)}")
+            
         hr_path = os.path.join(self.hr_dir, self.hr_files[idx])
         lr_path = os.path.join(self.lr_dir, self.lr_files[idx])
         
